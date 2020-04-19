@@ -1,0 +1,169 @@
+/* large layout stuff - body and containers */
+body {
+  background: #FAFAFA;
+}
+.container1{
+  margin: 0px;
+  padding: 0px;
+  background: #013270;
+  font-family: Georgia, serif;
+}
+.container2, .container3{
+  padding-top: 4%;
+}
+.container4{
+  padding-top: 2%;
+  padding-bottom: 3%;
+}
+
+/* Navigation Bar Specific*/
+.home{
+  color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 3%;
+}
+.home h1{
+  font-size: 20px;
+}
+.dropdown {
+  color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 3%;
+}
+.dropdown h1, .dropdown1 h1{
+  font-size: 20px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #E4E3E3;
+  min-width: 200px;
+  z-index: 1;
+}
+.dropdown-content p{
+  padding: 5% 5%;
+  display: inline;
+  margin: auto;
+  color: black;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+.option{
+  cursor: pointer;
+  margin-top: 3%;
+  height: 40px;
+  border-bottom: solid;
+  border-color: white;
+}
+.option-content{
+  padding-top: 3%;
+  padding-left: 4%;
+}
+.dropdown-content .option:hover{
+  background-color: #013270;
+  color: white;
+}
+.dropdown-content .option:hover p{
+  color: white;
+}
+.flag{
+  width: 20%;
+  display: inline;
+}
+
+/* Container 2 Specific*/
+.imagecontainer{
+  width: 100%;
+  overflow: hidden;
+  padding: 0%;
+  margin: 0%;
+  border: solid;
+}
+.leagues{
+  text-align: center;
+  width: 100%;
+  transition-duration: 0.8s;
+}
+.leagues:hover{
+  transform: scale(1.01);
+  transition-duration: 0.8s;
+  filter: brightness(95%);
+}
+.column2{
+  padding-left: 5%;
+  padding-top: 2%;
+}
+.column2 h1, .column2 h2{
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+.column2 p{
+  line-height: 30px;
+}
+.button1 button{
+  display: inline;
+  text-align: center;
+  background: black;
+  color: white;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: 2.7%;
+  padding-right: 2.7%;
+  font-size: 15px;
+  font-family: Georgia, serif;
+  border: none;
+}
+.button1 button:hover{
+  background-color: red;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+/* Stories (Container3) */
+.column4 p{
+  color: #797979;
+  font-size: 20px;
+  font-family: Optima, sans-serif;
+  text-align: left;
+}
+
+/* Stories Images and Captions (Container4) */
+.imagecontainer1{
+  width: 100%;
+  overflow: hidden;
+  padding: 0%;
+  margin: 0%;
+}
+.column5{
+  height: 100%;
+}
+.words1, .words2, .words3, .words4{
+  background-color: #C8C7C7;
+  padding: 14%;
+  font-family: Optima, sans-serif;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+.explore1, .explore2, .explore3, .explore4{
+  text-align: center;
+  width: 100%;
+  transition-duration: 0.8s;
+}
+.column5:hover .explore1,
+.column5:hover .explore2,
+.column5:hover .explore3,
+.column5:hover .explore4{
+  transform: scale(1.03);
+  transition-duration: 0.8s;
+  filter: brightness(90%);
+}
+.column5:hover .imagecontainer3, .column5:hover .words1,
+.column6:hover .imagecontainer4, .column5:hover .words2,
+.column7:hover .imagecontainer5, .column5:hover .words3,
+.column8:hover .imagecontainer6, .column5:hover .words4{
+  box-shadow: 0px 0px 20px #CECECF;
+  transition-duration: 0.8s;
+}
