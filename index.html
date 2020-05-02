@@ -191,6 +191,7 @@
       </div>
       <div id = "formcontent">
       </div>
+
     <script>
     let footballAPIkey = "a791f054efdf4170b2c65c53204f1ce5"
     //START helper functions
@@ -257,7 +258,7 @@
           let formid = league_name+"scorerinput";
           let buttonid = league_name+"scorerbutton";
           $("#formcontent").append("<br>");
-          $("#formcontent").append("<p>Enter number of results below!</p>");
+          $("#formcontent").append("<p>Number of Results:</p>");
           $("#formcontent").append('<form method="GET" id= "' + target + '" >');
           $("#"+target).append('<input type = "number" id = "' + formid + '" min=1 max =' +scorers.length +' />');
           $("#"+target).append('<button id= "' + buttonid + '" type="button">Submit</button>');
@@ -290,7 +291,7 @@
           let formid = league_name+"resinput";
           let buttonid = league_name+"resbutton";
           $("#formcontent").append("<br>");
-          $("#formcontent").append("<p>Enter number of results below!</p>");
+          $("#formcontent").append("<p>Number of Results: </p>");
           $("#formcontent").append('<form method="GET" id= "' + target + '" >');
           $("#"+target).append('<input type = "number" id = "' + formid + '" min=1 max =' +matches.length +' />');
           $("#"+target).append('<button id= "' + buttonid + '" type="button">Submit</button>');
@@ -337,7 +338,7 @@
             let formid = league_name+"fixinput";
             let buttonid = league_name+"fixbutton";
             $("#formcontent").append("<br>");
-            $("#formcontent").append("<p>Enter number of fixtures below!</p>");
+            $("#formcontent").append("<p>Number of Results: </p>");
             $("#formcontent").append('<form method="GET" id= "' + target + '" >');
             $("#"+target).append('<input type = "number" id = "' + formid + '" min=1 max =' +matches.length +' />');
             $("#"+target).append('<button id= "' + buttonid + '" type="button">Submit</button>');
@@ -494,7 +495,7 @@
     });
     //END form event listeners
     //END EVENT LISTENERS
-
     </script>
-  </body> 
+
+  </body>
 </html>
