@@ -1,10 +1,11 @@
-<!doctype html>
+<!Doctype html>
 <html>
   <head>
     <title>Football Stats</title>
    <!-- From Bootstrap -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="style.css" type="text/css" rel="stylesheet" />
   </head>
@@ -16,48 +17,86 @@
     <div class="container-fluid container1"> <!-- Container1-->
               <div class="top" row1> <!-- Row1-->
                 <div class="col-xs-12 nav"> <!-- Column1-->
-                  <span class="nav home"><h1 style="cursor:pointer;" onclick="location.href=''">Home</h1></span>
-                  <span class="nav home"><h1 style="cursor:pointer;" onclick="location.href=''">My Club</h1></span>
+                  <span class="nav home" id = "home"><h1 style="cursor:pointer;">Home</h1></span>
+                  <span class="nav home"><h1 style="cursor:pointer;">My League</h1></span>
 
                   <div class="dropdown">
                     <span class="nav"><h1 style="cursor:pointer;">League Standings</h1></span>
                     <div class="dropdown-content">
                     <div class="option">
-                      <div class="option-content"><span><img src="germany.png" class="flag"><span><p>Bundesliga</p></div>
+                      <div class="option-content"><span id = "BL1_standings"><img src="germany.png" class="flag"><span><p>Bundesliga</p></div>
                     </div>
                     <div class="option">
-                      <div class="option-content"><span><img src="spain.jpg" class="flag"><span><p>La Liga</p></div>
+                      <div class="option-content"><span id = "PD_standings"><img src="spain.jpg" class="flag"><span><p>La Liga</p></div>
                     </div>
                     <div class="option">
-                      <div class="option-content"><span><img src="france.png" class="flag"><span><p>Ligue 1</p></div>
+                      <div class="option-content"><span id = "FL1_standings"><img src="france.png" class="flag"><span><p>Ligue 1</p></div>
                     </div>
                     <div class="option">
-                      <div class="option-content"><span><img src="england.png" class="flag"><span><p>Premier League</p></div>
+                      <div class="option-content"><span id = "PL_standings"><img src="england.png" class="flag"><span><p>Premier League</p></div>
                     </div>
                     <div class="option">
-                      <div class="option-content"><span><img src="italy.png" class="flag"><span><p>Serie A</p></div>
+                      <div class="option-content"><span id = "SA_standings"><img src="italy.png" class="flag"><span><p>Serie A</p></div>
                     </div>
                     </div>
                   </div>
-
-
                     <div class="dropdown">
                       <span class="nav"><h1 style="cursor:pointer;">Top Scorers</h1></span>
                       <div class="dropdown-content">
                       <div class="option">
-                        <div class="option-content"><span><img src="germany.png" class="flag"><span><p>Bundesliga</p></div>
+                        <div class="option-content"><span id = "BL1_scorers"><img src="germany.png" class="flag"><span><p>Bundesliga</p></div>
                       </div>
                       <div class="option">
-                        <div class="option-content"><span><img src="spain.jpg" class="flag"><span><p>La Liga</p></div>
+                        <div class="option-content"><span id = "PD_scorers"><img src="spain.jpg" class="flag"><span><p>La Liga</p></div>
                       </div>
                       <div class="option">
-                        <div class="option-content"><span><img src="france.png" class="flag"><span><p>Ligue 1</p></div>
+                        <div class="option-content"><span id = "FL1_scorers"><img src="france.png" class="flag"><span><p>Ligue 1</p></div>
                       </div>
                       <div class="option">
-                        <div class="option-content"><span><img src="england.png" class="flag"><span><p>Premier League</p></div>
+                        <div class="option-content"><span id = "PL_scorers"><img src="england.png" class="flag"><span><p>Premier League</p></div>
                       </div>
                       <div class="option">
-                        <div class="option-content"><span><img src="italy.png" class="flag"><span><p>Serie A</p></div>
+                        <div class="option-content"><span id = "SA_scorers"><img src="italy.png" class="flag"><span><p>Serie A</p></div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <span class="nav"><h1 style="cursor:pointer;">Upcoming Fixtures</h1></span>
+                      <div class="dropdown-content">
+                      <div class="option">
+                        <div class="option-content"><span id = "BL1_fix"><img src="germany.png" class="flag"><span><p>Bundesliga</p></div>
+                      </div>
+                      <div class="option">
+                        <div class="option-content"><span id = "PD_fix"><img src="spain.jpg" class="flag"><span><p>La Liga</p></div>
+                      </div>
+                      <div class="option">
+                        <div class="option-content"><span id = "FL1_fix"><img src="france.png" class="flag"><span><p>Ligue 1</p></div>
+                      </div>
+                      <div class="option">
+                        <div class="option-content"><span id = "PL_fix"><img src="england.png" class="flag"><span><p>Premier League</p></div>
+                      </div>
+                      <div class="option">
+                        <div class="option-content"><span id = "SA_fix"><img src="italy.png" class="flag"><span><p>Serie A</p></div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <span class="nav"><h1 style="cursor:pointer;">Recent Results</h1></span>
+                      <div class="dropdown-content">
+                      <div class="option">
+                        <div class="option-content"><span id = "BL1_res"><img src="germany.png" class="flag"><span><p>Bundesliga</p></div>
+                      </div>
+                      <div class="option">
+                        <div class="option-content"><span id = "PD_res"><img src="spain.jpg" class="flag"><span><p>La Liga</p></div>
+                      </div>
+                      <div class="option">
+                        <div class="option-content"><span id = "FL1_res"><img src="france.png" class="flag"><span><p>Ligue 1</p></div>
+                      </div>
+                      <div class="option">
+                        <div class="option-content"><span id = "PL_res"><img src="england.png" class="flag"><span><p>Premier League</p></div>
+                      </div>
+                      <div class="option">
+                        <div class="option-content"><span id = "SA_res"><img src="italy.png" class="flag"><span><p>Serie A</p></div>
                       </div>
                       </div>
                     </div>
@@ -67,6 +106,7 @@
         </div> <!-- Close Container 1-->
 
 
+      <div id = "notthenavbar">
         <!--Leagues-->
         <div class="container-fluid container2"> <!--Container2-->
           <a name=explore></a>
@@ -77,13 +117,13 @@
                 <p> Welcome to 'footballstats.com'! If you are a football fanatic, then you have come the right place.
                     Navigate this website to find all sorts of statistics about Europe's top 5 football leagues:
                     German Bundeliga, Spanish La Liga, French Ligue 1, English Premier League, and Itaian Serie A- from
-                    league standings, to top goalscorers. You can even choose your favorite club, and instantly gain access
-                    to the latest news and statistics.</p>
-                    <div class="button1">  <button onclick="" style="cursor:pointer;">Pick Your Favorite Club</button> </div>
+                    league standings, to top goalscorers. You can even choose your favorite league, and use the "My League"
+                    section to view all related stats.</p>
+                    <div class="button1">  <button style="cursor:pointer;">Pick Your Favorite League</button> </div>
               </div> <!--Close Column2-->
               <div class="d-none d-sm-block col-sm-6 col-md-6 col-lg-6 column3"> <!--Column4-->
                 <div class="imagecontainer">
-                <img src="leagues.png" class="leagues img-fluid" alt="" onclick="" style="cursor:pointer;">
+                <img src="leagues.png" class="leagues img-fluid" alt="" style="cursor:pointer;">
 
                </div>
               </div> <!--Close Column3-->
@@ -139,8 +179,322 @@
             </div>
              <div class = "words4">
                <p> Premier League Clubs Set To Finish Season</p>
-               <p> -League Chiefs
+               <p> -League Chiefs </p>
              </div>
            </div> <!--Close Column15-->
          </div> <!-- Close Row4-->
         </div> <!-- Close Container4-->
+      </div> <!--close non-nav bar content-->
+      <div id = "nonhomepagecontent">
+        <table id = "content_table">
+        </table>
+      </div>
+      <div id = "formcontent">
+      </div>
+    <script>
+    let footballAPIkey = "a791f054efdf4170b2c65c53204f1ce5"
+    //START helper functions
+    function clearTableContent()
+    {
+      $("#content_table").empty();
+    }
+    function hideHomepageContent() //hides everything but the navbar to display other content
+    {
+      $("#notthenavbar").hide();
+    }
+    function showHomepageContent() //causes homepage content to reappear
+    {
+      $("#notthenavbar").show();
+    }
+    function clearFormContent()
+    {
+      $("#formcontent").empty();
+    }
+    //END helper functions
+    //START display functions
+    function displayLeagueStanding(league_name)
+    {
+      hideHomepageContent();
+      clearTableContent();
+      clearFormContent();
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          let fulljson = JSON.parse(this.responseText);
+          let standings = fulljson.standings[0].table;
+          let header_row = "<tr><th>Position</th><th>Team</th><th>GP</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th></tr>";
+          $("#content_table").append(header_row);
+          for (let position = 1; position < standings.length + 1; position++)
+          {
+            let current_row = "<tr><td>" + position + "</td><td>" + standings[position-1].team.name + "</td><td>" + standings[position-1].playedGames + "</td><td>" + standings[position-1].won + "</td><td>" + standings[position-1].draw + "</td><td>" + standings[position-1].lost + "</td><td>" + standings[position-1].goalDifference + "</td><td>" + standings[position-1].points + "</td></tr>";
+            $("#content_table").append(current_row);
+          }
+        }
+      }
+      let strtopass = ("https://api.football-data.org/v2/competitions/").concat(league_name).concat("/standings");
+      xhttp.open("GET", strtopass, true);
+      xhttp.setRequestHeader("X-Auth-Token",footballAPIkey);
+      xhttp.send();
+    }
+    function displayTopScorers(league_name, num_scorers)
+    {
+      hideHomepageContent();
+      clearTableContent();
+      clearFormContent();
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          let fulljson = JSON.parse(this.responseText);
+          let scorers = fulljson.scorers;
+          let header_row = "<tr><th>Position</th><th>Player</th><th>Team</th><th>Goals Scored</th></tr>";
+          $("#content_table").append(header_row);
+          for (let position = 1; position < scorers.length + 1; position++)
+          {
+            let current_row = "<tr><td>" + position + "</td><td>" + scorers[position-1].player.name + "</td><td>" + scorers[position-1].team.name + "</td><td>" + scorers[position-1].numberOfGoals + "</td></tr>";
+            $("#content_table").append(current_row);
+          }
+          let target = league_name+"scorerform";
+          let formid = league_name+"scorerinput";
+          let buttonid = league_name+"scorerbutton";
+          $("#formcontent").append("<br>");
+          $("#formcontent").append("<p>Enter number of results below!</p>");
+          $("#formcontent").append('<form method="GET" id= "' + target + '" >');
+          $("#"+target).append('<input type = "number" id = "' + formid + '" min=1 max =' +scorers.length +' />');
+          $("#"+target).append('<button id= "' + buttonid + '" type="button">Submit</button>');
+          $("#formcontent").append("</form>");
+        }
+      }
+      let strtopass = ("https://api.football-data.org/v2/competitions/").concat(league_name).concat("/scorers?limit=").concat(num_scorers);
+      xhttp.open("GET", strtopass, true);
+      xhttp.setRequestHeader("X-Auth-Token",footballAPIkey);
+      xhttp.send();
+    }
+    function displayRecentResults(league_name, num_games)
+    {
+      hideHomepageContent();
+      clearTableContent();
+      clearFormContent();
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          let fulljson = JSON.parse(this.responseText);
+          let matches = fulljson.matches;
+          let header_row = "<tr><th>Date</th><th>Home Team</th><th>Score</th><th>Away Team</th></tr>";
+          $("#content_table").append(header_row);
+          for (let position = matches.length; position > Math.max((matches.length - parseInt(num_games)), 0); position--)
+          {
+            let current_row = "<tr><td>" + (matches[position-1].utcDate).substring(0,10) + "</td><td>" + matches[position-1].homeTeam.name + "</td><td>" + matches[position-1].score.fullTime.homeTeam + "-" + matches[position-1].score.fullTime.awayTeam + "</td><td>" + matches[position-1].awayTeam.name + "</td></tr>";
+            $("#content_table").append(current_row);
+          }
+          let target = league_name+"resform";
+          let formid = league_name+"resinput";
+          let buttonid = league_name+"resbutton";
+          $("#formcontent").append("<br>");
+          $("#formcontent").append("<p>Enter number of results below!</p>");
+          $("#formcontent").append('<form method="GET" id= "' + target + '" >');
+          $("#"+target).append('<input type = "number" id = "' + formid + '" min=1 max =' +matches.length +' />');
+          $("#"+target).append('<button id= "' + buttonid + '" type="button">Submit</button>');
+          $("#formcontent").append("</form>");
+        }
+      }
+      let strtopass = ("https://api.football-data.org/v2/competitions/").concat(league_name).concat("/matches?status=FINISHED");
+      xhttp.open("GET", strtopass, true);
+      xhttp.setRequestHeader("X-Auth-Token",footballAPIkey);
+      xhttp.send();
+    }
+
+    function displayUpcomingFixtures(league_name, num_games)
+    {
+      console.log("NUMGAMES");
+      console.log(num_games);
+      hideHomepageContent();
+      clearTableContent();
+      clearFormContent();
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          let fulljson = JSON.parse(this.responseText);
+          if (fulljson.count == 0)
+          {
+            alert("There are currently no matches scheduled due to the COVID-19 crisis. Please check back once leagues have announced they are resuming!");
+            showHomepageContent();
+          }
+          else
+          {
+            let matches = fulljson.matches;
+            let header_row = "<tr><th>Date</th><th>Home Team</th><th>Away Team</th></tr>";
+            $("#content_table").append(header_row);
+            for (let position = 1; position < Math.min(parseInt(num_games) +1, matches.length); position++)
+            {
+              if(matches[position-1].utcDate == null)
+              {
+                break;
+              }
+              let current_row = "<tr><td>" + (matches[position-1].utcDate).substring(0,10) + "</td><td>" + matches[position-1].homeTeam.name + "</td><td>" + matches[position-1].awayTeam.name + "</td></tr>";
+              $("#content_table").append(current_row);
+            }
+            let target = league_name+"fixform";
+            let formid = league_name+"fixinput";
+            let buttonid = league_name+"fixbutton";
+            $("#formcontent").append("<br>");
+            $("#formcontent").append("<p>Enter number of fixtures below!</p>");
+            $("#formcontent").append('<form method="GET" id= "' + target + '" >');
+            $("#"+target).append('<input type = "number" id = "' + formid + '" min=1 max =' +matches.length +' />');
+            $("#"+target).append('<button id= "' + buttonid + '" type="button">Submit</button>');
+            $("#formcontent").append("</form>");
+          }
+        }
+      }
+      let strtopass = ("https://api.football-data.org/v2/competitions/").concat(league_name).concat("/matches?status=SCHEDULED");
+      xhttp.open("GET", strtopass, true);
+      xhttp.setRequestHeader("X-Auth-Token",footballAPIkey);
+      xhttp.send();
+    }
+    //END display functions
+
+    //START EVENT LISTENERS
+    //Home event listener
+    $("#home").click(function() {
+      clearTableContent();
+      clearFormContent();
+      showHomepageContent();
+    });
+    //START standings event listeners
+    $("#PL_standings").click(function() {
+    displayLeagueStanding("PL");
+    });
+    $("#BL1_standings").click(function() {
+    displayLeagueStanding("BL1");
+    });
+    $("#SA_standings").click(function() {
+    displayLeagueStanding("SA");
+    });
+    $("#FL1_standings").click(function() {
+    displayLeagueStanding("FL1");
+    });
+    $("#PD_standings").click(function() {
+    displayLeagueStanding("PD");
+    });
+    //END standings event listeners
+    //START top scorers event listeners (default is 20 top scorers, can be readjusted in form on page)
+    $("#PL_scorers").click(function() {
+    displayTopScorers("PL", 20);
+    });
+    $("#BL1_scorers").click(function() {
+    displayTopScorers("BL1", 20);
+    });
+    $("#FL1_scorers").click(function() {
+    displayTopScorers("SA", 20);
+    });
+    $("#SA_scorers").click(function() {
+    displayTopScorers("FL1", 20);
+    });
+    $("#PD_scorers").click(function() {
+    displayTopScorers("PD", 20);
+    });
+    //END top scorers event listeners
+    //START fixtures event listeners
+    $("#PL_fix").click(function() {
+    displayUpcomingFixtures("PL", 10);
+    });
+    $("#BL1_fix").click(function() {
+    displayUpcomingFixtures("BL1", 10);
+    });
+    $("#FL1_fix").click(function() {
+    displayUpcomingFixtures("SA", 10);
+    });
+    $("#SA_fix").click(function() {
+    displayUpcomingFixtures("FL1", 10);
+    });
+    $("#PD_fix").click(function() {
+    displayUpcomingFixtures("PD", 10);
+    });
+    //END fixtures event listeners
+    //START results event listeners
+    $("#PL_res").click(function() {
+    displayRecentResults("PL", 25);
+    });
+    $("#BL1_res").click(function() {
+    displayRecentResults("BL1", 25);
+    });
+    $("#FL1_res").click(function() {
+    displayRecentResults("SA", 25);
+    });
+    $("#SA_res").click(function() {
+    displayRecentResults("FL1", 25);
+    });
+    $("#PD_res").click(function() {
+    displayRecentResults("PD", 25);
+    });
+    //END results event listeners
+
+    //START form event listeners
+    $(document).on('click', '#BL1resbutton', function() {
+    let res = $("#BL1resinput").val();
+    displayRecentResults("BL1", res);
+    });
+    $(document).on('click', '#PLresbutton', function() {
+    let res = $("#PLresinput").val();
+    displayRecentResults("PL", res);
+    });
+    $(document).on('click', '#FL1resbutton', function() {
+    let res = $("#FL1resinput").val();
+    displayRecentResults("FL1", res);
+    });
+    $(document).on('click', '#PDresbutton', function() {
+    let res = $("#PDresinput").val();
+    displayRecentResults("PD", res);
+    });
+    $(document).on('click', '#SAresbutton', function() {
+    let res = $("#SAresinput").val();
+    displayRecentResults("SA", res);
+    });
+
+    $(document).on('click', '#SAfixbutton', function() {
+    let res = $("#SAfixinput").val();
+    displayUpcomingFixtures("SA", res);
+    });
+    $(document).on('click', '#FL1fixbutton', function() {
+    let res = $("#FL1fixinput").val();
+    displayUpcomingFixtures("FL1", res);
+    });
+    $(document).on('click', '#PLfixbutton', function() {
+    let res = $("#PLfixinput").val();
+    displayUpcomingFixtures("PL", res);
+    });
+    $(document).on('click', '#PDfixbutton', function() {
+    let res = $("#PDfixinput").val();
+    displayUpcomingFixtures("PD", res);
+    });
+    $(document).on('click', '#BL1fixbutton', function() {
+    let res = $("#BL1fixinput").val();
+    console.log(res);
+    displayUpcomingFixtures("BL1", res);
+    });
+
+    $(document).on('click', '#BL1scorerbutton', function() {
+    let res = $("#BL1scorerinput").val();
+    displayTopScorers("BL1", res);
+    });
+    $(document).on('click', '#PLscorerbutton', function() {
+    let res = $("#PLscorerinput").val();
+    displayTopScorers("PL", res);
+    });
+    $(document).on('click', '#FL1scorerbutton', function() {
+    let res = $("#FL1scorerinput").val();
+    displayTopScorers("FL1", res);
+    });
+    $(document).on('click', '#SAscorerbutton', function() {
+    let res = $("#SAscorerinput").val();
+    displayTopScorers("SA", res);
+    });
+    $(document).on('click', '#PDscorerbutton', function() {
+    let res = $("#PDscorerinput").val();
+    displayTopScorers("PD", res);
+    });
+    //END form event listeners
+    //END EVENT LISTENERS
+
+    </script>
+  </body> 
+</html>
