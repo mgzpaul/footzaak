@@ -232,6 +232,7 @@ th {
 #yuh
 {
   margin-left:10%;
+  font-family: Georgia, serif;
 }
 #favoritecontentform
 {
@@ -253,6 +254,11 @@ th {
   border: none;
   margin-left: 1%;
 }
+#favoritecontent button:hover{
+  background: red;
+  transition-duration: 0.4s;
+}
+
 
 #league_choice{
   font-size: 15px;
@@ -279,6 +285,8 @@ th {
   z-index: 10;
   font-size: 1em;
 }
+
+
 @media only screen and (max-width: 768px) {
   .column2 h1{
     font-size: 35px;
