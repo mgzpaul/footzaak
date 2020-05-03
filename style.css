@@ -258,7 +258,19 @@ th {
   background: red;
   transition-duration: 0.4s;
 }
-
+#favoritecontent h1{
+  font-family: Georgia, serif;
+  margin-left: 10%;
+  display: inline;
+}
+#favoritecontent img{
+  margin-left: 2%;
+  margin-bottom: 1%;
+  display: inline;
+  width: 50px;
+  border: solid;
+  border-width: 2px;
+}
 
 #league_choice{
   font-size: 15px;
@@ -319,7 +331,6 @@ th {
     font-size: 9px;
     margin-bottom: 2%;
   }
-
   .column2 h1{
     font-size: 30px;
   }
@@ -332,5 +343,19 @@ th {
   }
   .column2 button{
     font-size: 10px;
+  }
+  #favoritecontent h1{
+    font-size: 30px;
+  }
+  #favoritecontent h2{
+    font-size: 25px;
+  }
+  #favoritecontent img{
+    margin-left: 2%;
+    margin-bottom: 1%;
+    display: inline;
+    width: 40px;
+    border: solid;
+    border-width: 2px;
   }
 }
