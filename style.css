@@ -145,7 +145,7 @@ body {
   padding: 14%;
   font-family: Optima, sans-serif;
   font-weight: bold;
-  font-size: 1.3vw;
+  font-size: 12px;
 }
 .explore1, .explore2, .explore3, .explore4{
   text-align: center;
@@ -278,4 +278,51 @@ th {
   position: relative;
   z-index: 10;
   font-size: 1em;
+}
+@media only screen and (max-width: 768px) {
+  .column2 h1{
+    font-size: 35px;
+  }
+  .column2 h2{
+    font-size: 28px;
+  }
+  .column2 p{
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .column2 button{
+    font-size: 15px;
+  }
+  .column3{
+    padding-top: 10%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .home h1, .dropdown h1{
+    font-size: 15px;
+  }
+  table{
+    width: 100%;
+    margin-left: 0%;
+    margin-right:0%;
+    font-size: 12px;
+  }
+  .words1, .words2, .words3, .words4{
+    font-size: 9px;
+    margin-bottom: 2%;
+  }
+
+  .column2 h1{
+    font-size: 30px;
+  }
+  .column2 h2{
+    font-size: 22px;
+  }
+  .column2 p{
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .column2 button{
+    font-size: 10px;
+  }
 }
