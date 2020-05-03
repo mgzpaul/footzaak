@@ -368,6 +368,26 @@
       clearFormContent();
       clearFavoriteContent();
       let league = localStorage.getItem("favorite_league");
+      let fullleaguename;
+      switch(league)
+      {
+        case "PL":
+          fullleaguename = "Premier League";
+          break;
+        case "PD":
+          fullleaguename = "La Liga";
+          break;
+        case "SA":
+          fullleaguename = "Seria A";
+          break;
+        case "BL1":
+          fullleaguename = "Bundesliga";
+          break;
+        case "FL1":
+          fullleaguename = "Ligue 1";
+          break;
+      }
+      $("#favoritecontent").append("<h1>" + fullleaguename + "</h1>");
       $("#favoritecontent").append("<h2 id = 'yuh'>League Standings</h2>");
       displayFavoriteLeagueStandingsHelper(league);
       $("#favoritecontent").append("<br>");
